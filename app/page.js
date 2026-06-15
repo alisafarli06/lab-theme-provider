@@ -1,3 +1,6 @@
+import ThemeToggle from "./components/ThemeToggle";
+
+// Server Component — no hooks needed here, ThemeToggle is the Client Component
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-background px-6 text-foreground">
@@ -7,7 +10,7 @@ export default function Home() {
             Aurora Notes
           </h1>
           <p className="text-base text-muted">
-            A tiny app that works great in daylight. Now it needs a night side.
+            A tiny app that works great in daylight. Now it has a night side.
           </p>
         </div>
 
@@ -18,13 +21,7 @@ export default function Home() {
           </p>
         </div>
 
-        {/* This button does nothing yet. Wiring it up is your job. */}
-        <button
-          type="button"
-          className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90"
-        >
-          Switch to dark mode
-        </button>
+        <ThemeToggle />
       </main>
     </div>
   );
